@@ -3,6 +3,22 @@ html {
 }
 
 .active-nav {
-  border-bottom: 2px solid #1e3a8a;
-  color: #1e3a8a;
+  border-bottom: 2px solid #7094f8;
+  color: #7094f8;
+}
+
+.zoom-inner {
+  animation: zoomInOut 10s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
