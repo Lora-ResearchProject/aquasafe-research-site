@@ -252,6 +252,691 @@
       </p>
     </section>
 
+    <!-- ============================= -->
+    <!-- Section: What Is AquaSafe?    -->
+    <!-- ============================= -->
+    <section id="features" class="py-20 bg-sky-50">
+      <div class="container mx-auto px-6 md:px-20 flex flex-col-reverse md:flex-row items-center gap-12">
+        <!-- Left: Phone mockup -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img
+            src="assets/images/aquasafe-phone.png"
+            alt="AquaSafe App on Phone"
+            class="max-w-xs md:max-w-sm"
+          />
+        </div>
+
+        <!-- Right: Heading + copy + feature list + button -->
+        <div class="w-full md:w-1/2">
+          <h2 class="text-4xl font-bold text-blue-900 mb-6">What Is AquaSafe?</h2>
+          <p class="text-gray-700 mb-8">
+            AquaSafe is an innovative maritime communication and safety solution
+            tailored for small-scale fishing vessels operating in remote and
+            challenging environments. By leveraging LoRa technology, AI/ML-powered
+            analytics, and user-friendly mobile and web applications, AquaSafe
+            ensures real-time weather updates, fishing hotspot predictions, vessel
+            tracking, and emergency alerts—all without the need for internet
+            connectivity. With features designed for reliability, affordability,
+            and sustainability, AquaSafe empowers fishermen with the tools they
+            need to navigate safely, efficiently, and sustainably, bridging the
+            technological gap for small fishing communities worldwide.
+          </p>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 text-gray-800 mb-8">
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Real-Time Tracking
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Bluetooth Integration
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Weather Analytics
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Route History
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Fishing Predictions
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Data Logging
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Emergency Alerts
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Fault Tolerance
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              LoRa Communication
+            </li>
+            <li class="flex items-start">
+              <span class="text-teal-500 mr-2">«</span>
+              Sustainable Insights
+            </li>
+          </ul>
+
+          <a
+            href="#download"
+            class="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded hover:bg-blue-800 transition"
+          >
+            DOWNLOAD NOW
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- Section: Methodology         -->
+    <!-- ============================= -->
+    <section id="methodology" class="py-16 px-6 md:px-20 bg-white">
+      <div class="container mx-auto flex flex-col md:flex-row items-start gap-12">
+        <!-- Left: Text -->
+        <div class="w-full md:w-1/2 space-y-6">
+          <h2 class="text-4xl font-bold text-blue-900">Methodology</h2>
+          
+          <p>
+            This study adopts a <strong>mixed-method research approach</strong>, combining experimental system development with both quantitative performance testing and qualitative field observations. The communication system integrates <strong>LoRa</strong> and <strong>Bluetooth Low Energy (BLE)</strong> technologies to provide real-time marine data exchange, with the primary goal of improving communication, safety, and decision-making for small-scale fishing vessels in Sri Lanka.
+          </p>
+          
+          <p>
+            The <strong>system architecture</strong> involves deploying ESP32 microcontrollers and SX1278 LoRa transceivers on vessels, enabling data transfer via BLE to a mobile application and further via LoRa to a gateway (LG01v2). A MERN-stack–based backend handles vessel data processing, with Python used for analyzing weather and fishing hotspots. The mobile app, built in Flutter, supports offline BLE communication. Tools such as Docker and Kubernetes are employed to ensure system scalability and reliability.
+          </p>
+          
+          <p>
+            Field visits to the <strong>National Aquatic Resources Research and Development Agency (NARA)</strong> revealed shortcomings in current data gathering and vessel tracking methods, which rely heavily on informal platforms like WhatsApp and Facebook. These insights informed the design of a structured, real-time tracking and alert system.
+          </p>
+        </div>
+
+        <!-- Right: Diagram -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img
+            src="assets/images/methodology-diagram.png"
+            alt="System architecture & data flow diagram"
+            class="max-w-full rounded shadow"
+          />
+        </div>
+      </div>
+
+      <!-- Full-width paragraphs -->
+      <div class="container mx-auto mt-12 space-y-6">
+        <p>
+          Data is collected from onboard sensors and transmitted periodically. The system processes vessel coordinates, SOS alerts, chat messages, weather updates, and hotspot requests through compact, modular payloads. Messages are optimized using <strong>custom compression</strong>, <strong>Base62-encoded timestamps</strong>, <strong>CRC-8 checksums</strong>, and <strong>AES-128 encryption</strong> for secure and efficient LoRa transmission.
+        </p>
+        
+        <p>
+          A mathematical algorithm is used to identify fishing hotspots by analyzing real-time and historical GPS data. The system selects the top three active but not overcrowded zones to recommend efficient fishing locations.
+        </p>
+        
+        <p>
+          The methodology also accounts for <strong>key assumptions and constraints</strong> such as LoRa’s limited payload size, environmental interference at sea, and power limitations on small vessels. To mitigate these, the system employs <strong>low-energy protocols</strong>, <strong>modular data handling</strong>, and <strong>duty-cycled communication</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- Section: AquaSafe Key Elements (2-col)  -->
+    <!-- ======================================= -->
+    <section id="key-elements" class="py-20 bg-sky-100">
+      <div class="container mx-auto px-6 md:px-20 flex flex-col md:flex-row items-stretch">
+        
+        <!-- Left: Key Elements (50%) -->
+        <div class="w-full md:w-1/2 pr-6 flex flex-col justify-center">
+          <h2 class="text-4xl font-bold text-blue-900 mb-4">AquaSafe Key Elements</h2>
+          <p class="text-gray-700 max-w-lg mb-12">
+            AquaSafe integrates cutting-edge technologies like LoRa IoT, AI-powered fishing predictions, a Bluetooth-enabled mobile app, and a web platform to provide seamless communication, real-time insights, and enhanced operational efficiency for small fishing vessels.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+            <!-- OceanLink -->
+            <div class="flex flex-col items-start">
+              <svg class="w-8 h-8 text-teal-500 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- your icon path -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7-5 7 5-7 5-7-5z" />
+              </svg>
+              <h3 class="text-xl font-semibold text-blue-900">OceanLink IoT System</h3>
+              <p class="text-gray-600 text-sm">
+                A robust LoRa network enabling seamless connectivity for remote vessels.
+              </p>
+            </div>
+
+            <!-- FishCast -->
+            <div class="flex flex-col items-start">
+              <svg class="w-8 h-8 text-teal-500 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- your icon path -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3m0 0c0 1.657-1.343 3-3 3s-3-1.343-3-3m6 0H6" />
+              </svg>
+              <h3 class="text-xl font-semibold text-blue-900">FishCast Insights</h3>
+              <p class="text-gray-600 text-sm">
+                AI-powered fishing hotspot and weather prediction for safer decisions.
+              </p>
+            </div>
+
+            <!-- Mobile App -->
+            <div class="flex flex-col items-start">
+              <svg class="w-8 h-8 text-teal-500 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- your icon path -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+              </svg>
+              <h3 class="text-xl font-semibold text-blue-900">AquaSafe Mobile App</h3>
+              <p class="text-gray-600 text-sm">
+                Bluetooth-based offline app ensuring efficient, low-power communication at sea.
+              </p>
+            </div>
+
+            <!-- Web Platform -->
+            <div class="flex flex-col items-start">
+              <svg class="w-8 h-8 text-teal-500 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- your icon path -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
+              </svg>
+              <h3 class="text-xl font-semibold text-blue-900">FleetView Web Platform</h3>
+              <p class="text-gray-600 text-sm">
+                Web application for vessel tracking, route monitoring, and analysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex justify-start">
+            <a
+              href="#join"
+              class="bg-blue-900 text-white font-semibold px-6 py-2 text-sm rounded hover:bg-blue-800 transition"
+            >
+              JOIN NOW
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Illustration (50%) -->
+        <div class="w-full md:w-1/2">
+          <img
+            src="assets/images/key-elements-illustration.png"
+            alt="AquaSafe Key Elements Illustration"
+            class="object-cover h-full w-full rounded"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================== -->
+    <!-- Section: Our Featured Spot         -->
+    <!-- ================================== -->
+    <section id="featured" class="py-20 bg-sky-50">
+      <div class="container mx-auto px-6 md:px-20 flex flex-col lg:flex-row gap-12">
+        
+        <!-- Left Column -->
+        <div class="w-full lg:w-1/3 flex flex-col">
+          <!-- Heading -->
+          <h2 class="text-4xl font-bold text-blue-900 mb-4">Our<br/>Featured Spot</h2>
+          <!-- Copy -->
+          <p class="text-gray-700 mb-8 max-w-md">
+            AquaSafe combines advanced technologies such as LoRa IoT, AI-driven fishing predictions, a Bluetooth-enabled mobile application, and a web-based platform to deliver seamless connectivity, real-time data insights, and improved efficiency for small fishing vessels.
+          </p>
+          <!-- Button -->
+          <a href="#more" class="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded hover:bg-blue-800 transition mb-8">
+            VIEW MORE
+          </a>
+          <!-- Small Image -->
+          <img
+            src="assets/images/featured-thumb.jpg"
+            alt="Fishing vessel out at sea"
+            class="rounded shadow-md w-full object-cover"
+          />
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-full lg:w-2/3 flex flex-col">
+          <!-- Top: Feature Image w/ header bar -->
+          <div class="relative rounded-t-md overflow-hidden shadow-lg">
+            <!-- Header bar -->
+            <div class="absolute top-0 left-0 right-0 bg-blue-900 text-white flex items-center justify-between px-6 py-3">
+              <span class="font-semibold">OceanLink IoT System</span>
+              <a href="#oceanlink" class="w-8 h-8 flex items-center justify-center bg-white text-blue-900 rounded-full hover:bg-gray-100 transition">
+                <!-- right arrow icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+            <!-- Main Image -->
+            <img
+              src="assets/images/featured-main.jpg"
+              alt="Close-up of IoT device"
+              class="w-full h-64 sm:h-80 md:h-96 object-cover"
+            />
+          </div>
+
+          <!-- Links List -->
+          <div class="mt-6 grid gap-4">
+            <!-- FishCast -->
+            <a href="#fishcast" class="flex items-center justify-between bg-white p-4 rounded shadow hover:shadow-md transition">
+              <span class="font-semibold text-blue-900">FishCast Insights</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+            <!-- Mobile App -->
+            <a href="#mobileapp" class="flex items-center justify-between bg-white p-4 rounded shadow hover:shadow-md transition">
+              <span class="font-semibold text-blue-900">AquaSafe Mobile App</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+            <!-- Web Platform -->
+            <a href="#fleetview" class="flex items-center justify-between bg-white p-4 rounded shadow hover:shadow-md transition">
+              <span class="font-semibold text-blue-900">FleetView Web Platform</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================== -->
+    <!-- Section: How AquaSafe Works?         -->
+    <!-- ==================================== -->
+    <section id="how-it-works" class="py-20 bg-sky-100">
+      <div class="container mx-auto px-6 md:px-20 text-center space-y-6">
+        <!-- Title -->
+        <h2 class="text-4xl font-bold text-blue-900">How AquaSafe Works?</h2>
+        <!-- Subtitle -->
+        <p class="text-gray-600 max-w-xl mx-auto">
+          Fishing is a popular recreational activity around the world—fish freshwater
+          like rivers and lakes.
+        </p>
+
+        <!-- Steps Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 pt-12">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center">
+            <!-- Icon -->
+            <svg class="w-12 h-12 text-teal-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <!-- boat + shield icon -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7-5 7 5-7 5-7-5zm0 8l7-5 7 5"/>
+            </svg>
+            <!-- Heading -->
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Connect The IoT With The Boat</h3>
+            <!-- Description -->
+            <p class="text-gray-600 text-sm">
+              Easily link IoT system for seamless communication.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center">
+            <svg class="w-12 h-12 text-teal-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <!-- user + stars icon -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+            </svg>
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Register On The App</h3>
+            <p class="text-gray-600 text-sm">
+              Quickly sign up to access powerful features.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center">
+            <svg class="w-12 h-12 text-teal-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <!-- map pin icon -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3zm0 10v-6"/>
+            </svg>
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Get The Destination</h3>
+            <p class="text-gray-600 text-sm">
+              Find optimal fishing spots with accurate predictions.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex flex-col items-center">
+            <svg class="w-12 h-12 text-teal-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <!-- fish icon -->
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15s4-4 9-4 9 4 9 4-4 4-9 4-9-4-9-4z"/>
+            </svg>
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Enjoy Your Fishing</h3>
+            <p class="text-gray-600 text-sm">
+              Fish confidently with safety and efficiency tools.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- Section: Technologies         -->
+    <!-- ============================= -->
+    <section id="technologies" class="py-20 bg-white">
+      <div class="container mx-auto px-6 md:px-20 text-center">
+        <!-- Heading -->
+        <h2 class="text-4xl font-bold text-blue-900 mb-12">Technologies</h2>
+
+        <!-- Grid of Logos -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">
+          <!-- Flutter -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/flutter.png" alt="Flutter Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">Flutter</span>
+          </div>
+          <!-- Dart -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/dart.png" alt="Dart Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">Dart</span>
+          </div>
+          <!-- Bluetooth -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/bluetooth.png" alt="Bluetooth Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">Bluetooth</span>
+          </div>
+          <!-- React -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/react.png" alt="React Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">React</span>
+          </div>
+          <!-- NodeJs -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/nodejs.png" alt="Node.js Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">NodeJs</span>
+          </div>
+          <!-- Python -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/python.png" alt="Python Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">Python</span>
+          </div>
+          <!-- MongoDB -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/mongodb.png" alt="MongoDB Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">Mongo DB</span>
+          </div>
+          <!-- Arduino -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/arduino.png" alt="Arduino Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">Arduino</span>
+          </div>
+          <!-- OpenAI -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/openai.png" alt="OpenAI Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">OpenAI</span>
+          </div>
+          <!-- Docker -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/docker.png" alt="Docker Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">Docker</span>
+          </div>
+          <!-- GitHub -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/github.png" alt="GitHub Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">GitHub</span>
+          </div>
+          <!-- OpenWeather -->
+          <div class="flex flex-col items-center">
+            <img src="assets/images/tech/openweather.png" alt="OpenWeather Logo" class="w-16 h-16 object-contain mb-2"/>
+            <span class="text-sm font-medium text-gray-800">OpenWeather</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- Section: Milestones (Centered List)   -->
+    <!-- ===================================== -->
+    <section id="milestones" class="py-20 bg-sky-50">
+      <!-- Section header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-blue-900">Milestone</h2>
+      </div>
+
+      <!-- Milestone list, constrained and centered -->
+      <div class="max-w-3xl mx-auto space-y-12">
+        <!-- repeat this block for each milestone -->
+        <div class="flex items-start">
+          <!-- Step number -->
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">
+            1
+          </div>
+
+          <!-- Content -->
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">
+              May 2024
+            </span>
+            <h3 class="text-2xl font-semibold text-gray-800">
+              Topic Assessment
+            </h3>
+            <p class="text-gray-600">
+              An initial evaluation of the selected research topic to ensure its
+              relevance, feasibility, and alignment with academic or industry goals.
+            </p>
+          </div>
+        </div>
+        <!-- /repeat -->
+
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">
+            2
+          </div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">
+              July 2024
+            </span>
+            <h3 class="text-2xl font-semibold text-gray-800">
+              Proposal Presentation
+            </h3>
+            <p class="text-gray-600">
+              A formal presentation outlining the proposed research, including objectives,
+              methodology, expected outcomes, and timeline, delivered to gain approval
+              and feedback.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">
+            3
+          </div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">
+              August 2024
+            </span>
+            <h3 class="text-2xl font-semibold text-gray-800">
+              Proposal Report
+            </h3>
+            <p class="text-gray-600">
+              A detailed document that expands on the proposal presentation, providing
+              comprehensive background research, methodology, project scope, and a
+              planned schedule.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">4</div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">December 2024</span>
+            <h3 class="text-2xl font-semibold text-gray-800">Progress Presentation – I</h3>
+            <p class="text-gray-600">
+              A mid-project presentation demonstrating approximately 50% completion, including progress made, challenges faced, and any adjustments to the original plan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">5</div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">March 2025</span>
+            <h3 class="text-2xl font-semibold text-gray-800">Research Paper</h3>
+            <p class="text-gray-600">
+              A scholarly article presenting the research problem, methodology, results, and conclusions, formatted according to academic publication standards.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 6 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">6</div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">March 2025</span>
+            <h3 class="text-2xl font-semibold text-gray-800">Progress Presentation – II</h3>
+            <p class="text-gray-600">
+              A near-final presentation showcasing around 90% completion, highlighting significant findings, contributions, and pending tasks.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 7 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">7</div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">April 2025</span>
+            <h3 class="text-2xl font-semibold text-gray-800">Final Report</h3>
+            <p class="text-gray-600">
+              A comprehensive document detailing the entire research process, findings, analysis, conclusions, and recommendations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 8 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">8</div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">May 2025</span>
+            <h3 class="text-2xl font-semibold text-gray-800">Website Assessment</h3>
+            <p class="text-gray-600">
+              Evaluation of a project-related website for content accuracy, usability, design, and alignment with project goals.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 9 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">9</div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">May 2025</span>
+            <h3 class="text-2xl font-semibold text-gray-800">Final Presentation & VIVA</h3>
+            <p class="text-gray-600">
+              The concluding presentation of the research followed by a viva, where the student defends their work in front of a panel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 10 -->
+        <div class="flex items-start">
+          <div class="flex-shrink-0 text-5xl font-bold text-blue-900 w-16 text-center">10</div>
+          <div class="ml-6">
+            <span class="inline-block bg-black text-white uppercase text-xs px-2 py-1 mb-1">June 2025</span>
+            <h3 class="text-2xl font-semibold text-gray-800">Research Logbook</h3>
+            <p class="text-gray-600">
+              A chronological record of all research activities, decisions, reflections, and meetings, used to track progress and provide transparency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- Section: Our Newsletter              -->
+    <!-- ===================================== -->
+    <section
+      id="newsletter"
+      class="relative bg-cover bg-center"
+      style="background-image: url('assets/images/newsletter-bg.jpg');"
+    >
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      <div class="relative z-10 container mx-auto px-6 md:px-20 py-20 text-center text-white">
+        <!-- Heading -->
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Newsletter</h2>
+        <!-- Subtitle -->
+        <p class="mb-8 text-sm md:text-base">
+          Fishing is a popular recreational activity around the world—fish freshwater like rivers and lakes.
+        </p>
+
+        <!-- Form -->
+        <form class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-2xl mx-auto">
+          <input
+            type="text"
+            placeholder="Name"
+            class="flex-1 px-4 py-3 rounded bg-sky-50 text-gray-800 placeholder-gray-500 focus:outline-none"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="flex-1 px-4 py-3 rounded bg-sky-50 text-gray-800 placeholder-gray-500 focus:outline-none"
+          />
+          <button
+            type="submit"
+            class="px-6 py-3 bg-blue-900 hover:bg-blue-800 rounded text-white font-semibold transition"
+          >
+            SUBSCRIBE
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================================== -->
+    <!-- Footer                                -->
+    <!-- ===================================== -->
+    <footer class="bg-sky-100 py-12">
+      <div class="container mx-auto px-6 md:px-20 text-center space-y-6">
+        <!-- Logo -->
+        <div>
+          <img src="assets/images/aquasafe-logo-dark.svg" alt="AquaSafe Logo" class="mx-auto h-10" />
+        </div>
+
+        <!-- Nav Links -->
+        <nav class="space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-blue-900 transition">Home</a>
+          <a href="#pages" class="text-gray-700 hover:text-blue-900 transition">Pages</a>
+          <a href="#about" class="text-gray-700 hover:text-blue-900 transition">About Us</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-900 transition">Contact</a>
+        </nav>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center space-x-4">
+          <!-- Instagram -->
+          <a href="https://instagram.com" class="bg-blue-900 text-white p-3 rounded hover:bg-blue-800 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <!-- insta icon path -->
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://facebook.com" class="bg-blue-900 text-white p-3 rounded hover:bg-blue-800 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <!-- fb icon path -->
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://youtube.com" class="bg-blue-900 text-white p-3 rounded hover:bg-blue-800 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <!-- yt icon path -->
+            </svg>
+          </a>
+          <!-- X (Twitter) -->
+          <a href="https://twitter.com" class="bg-blue-900 text-white p-3 rounded hover:bg-blue-800 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <!-- x icon path -->
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+
     <!-- Footer -->
     <footer class="text-center py-6 bg-blue-900 text-white">
       <p class="text-sm">
