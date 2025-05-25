@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaSafe - Research Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-sky-50 text-gray-800 font-sans">
+    <!-- Header / Hero Section -->
+    <header class="relative">
+      <div
+        class="fixed top-0 left-0 right-0 z-50 bg-opacity-70 bg-gray-900 text-white flex items-center justify-between px-6 py-4 backdrop-blur-md"
+      >
+        <div class="text-xl font-bold">AquaSafe</div>
+        <ul class="flex space-x-6" id="navbar">
+          <li><a href="#home" class="hover:text-blue-300 nav-link">Home</a></li>
+          <li>
+            <a href="#about" class="hover:text-blue-300 nav-link">About</a>
+          </li>
+          <li>
+            <a href="#documents" class="hover:text-blue-300 nav-link"
+              >Documents</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-blue-300 nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Hero Slider -->
+      <div class="relative h-screen overflow-hidden pt-20" id="home">
+        <div
+          class="absolute inset-0 transition-opacity duration-1000 bg-cover bg-center slide opacity-100"
+          style="background-image: url('./assets/images/slider-01.jpg')"
+        >
+          <div
+            class="flex flex-col justify-center items-start h-full px-10 text-white bg-black bg-opacity-40"
+          >
+            <p class="text-xl mb-2">Let’s Go Fishing</p>
+            <h1 class="text-5xl font-bold leading-tight mb-6">
+              Life's Journey<br />Enjoy Every Cast
+            </h1>
+            <a
+              href="#join"
+              class="bg-blue-900 px-6 py-3 text-white text-lg font-semibold rounded"
+              >JOIN NOW</a
+            >
+          </div>
+        </div>
+        <div
+          class="absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center slide"
+          style="background-image: url('./assets/images/slider-02.jpg')"
+        >
+          <div
+            class="flex flex-col justify-center items-start h-full px-10 text-white bg-black bg-opacity-40"
+          >
+            <p class="text-xl mb-2">Let’s Go Fishing</p>
+            <h1 class="text-5xl font-bold leading-tight mb-6">
+              Making Waves<br />And Catching Fish
+            </h1>
+            <a
+              href="#join"
+              class="bg-blue-900 px-6 py-3 text-white text-lg font-semibold rounded"
+              >JOIN NOW</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section: Literature Review -->
+    <section
+      id="about"
+      class="py-16 px-6 md:px-20 bg-white flex flex-col md:flex-row items-start"
+    >
+      <img
+        src="https://via.placeholder.com/400x400"
+        alt="Literature Review"
+        class="w-full md:w-1/2 max-w-sm mb-8 md:mb-0"
+      />
+      <div class="md:ml-10">
+        <h2 class="text-3xl font-bold text-blue-900 mb-4">Literature Review</h2>
+        <p class="mb-4">
+          LoRa-based IoT systems have been increasingly explored across various
+          domains including <strong>agriculture</strong>,
+          <strong>industrial monitoring</strong>, and
+          <strong>maritime applications</strong>. In maritime contexts, where
+          traditional communication methods such as
+          <strong>satellite and VHF radio</strong> are expensive and
+          energy-intensive, LoRa offers a
+          <strong>cost-effective and energy-efficient alternative</strong>,
+          particularly for small vessels operating in remote or low-resource
+          environments.
+        </p>
+        <p class="mb-4">
+          Several studies highlight LoRa’s feasibility and effectiveness in
+          maritime communication:
+        </p>
+        <ul class="list-disc list-inside text-sm mb-4">
+          <li>
+            <strong>J. Pinelo et al.</strong> demonstrated the potential of
+            LoRaWAN to maintain vessel communication over
+            <strong>distances exceeding 100 km</strong> in non-line-of-sight
+            (NLOS) ocean environments by deploying gateways on elevated
+            terrains.
+          </li>
+          <li>
+            The study
+            <strong
+              >“LoRa Mesh Networks for Emergency Marine Communications”</strong
+            >
+            proposed using LoRa to enhance safety with mesh networking,
+            providing <strong>redundant communication layers</strong> in areas
+            lacking traditional coverage.
+          </li>
+          <li>
+            A <strong>multi-gateway LoRaWAN setup</strong> in Lake Toba,
+            Indonesia, showed that <strong>vessel tracking</strong> could be
+            achieved in maritime zones with limited internet connectivity.
+          </li>
+          <li>
+            <strong>LR-MPIBS</strong>, a system developed by
+            <strong>Zhengbao Li et al.</strong>, applied LoRa for
+            <strong>man-overboard detection</strong>, leveraging satellite
+            positioning and transmitting signals over 5 km to nearby gateways.
+          </li>
+          <li>
+            <strong>Sandra et al.</strong> investigated using
+            <strong>buoy-mounted antennas</strong> for LoRa transmission to
+            model path loss and improve offshore communication accuracy.
+          </li>
+          <li>
+            <strong>Sagala et al.</strong> explored a
+            <strong>multi-hop topology</strong> for LoRa networks, improving
+            transmission range and reliability by relaying data through
+            intermediate nodes.
+          </li>
+        </ul>
+        <p>
+          These studies collectively underscore LoRa’s growing relevance in
+          supporting maritime safety, vessel tracking, and environmental
+          monitoring, especially in areas where conventional technologies are
+          impractical.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: Research Gap -->
+    <section class="py-16 px-6 md:px-20 bg-sky-50">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4">Research Gap</h2>
+      <p class="mb-6">
+        While several studies have successfully demonstrated the potential of
+        LoRa technology for maritime communication—such as long-range
+        transmission, emergency alert systems, and vessel tracking—most existing
+        implementations focus on fixed or static systems, often in controlled
+        environments like buoys or land-based gateways. There is limited
+        research on the performance and optimization of LoRa for real-time,
+        mobile-based maritime applications, especially for small-scale fishing
+        vessels operating in dynamic sea conditions.
+      </p>
+      <p class="mb-4">Key gaps include:</p>
+      <ul class="list-disc list-inside mb-8">
+        <li>
+          Lack of studies addressing LoRa’s performance in mobile environments,
+          where vessel movement and sea state impact signal strength and
+          connectivity.
+        </li>
+        <li>
+          Insufficient exploration of data transmission protocols and
+          optimizations tailored for maritime IoT applications using LoRa.
+        </li>
+        <li>
+          Limited analysis of the trade-offs between energy consumption and data
+          transmission frequency in battery-powered maritime devices.
+        </li>
+        <li>
+          Few studies examine LoRa’s reliability, latency, and range in
+          real-world, offshore mobile deployments rather than simulated or
+          land-based tests.
+        </li>
+      </ul>
+      <p>
+        This gap highlights the need for comprehensive research on deploying
+        scalable, energy-efficient, and real-time LoRa-based systems that can
+        function effectively in open-sea, mobile contexts, addressing both
+        technical and environmental challenges.
+      </p>
+    </section>
+
+    <!-- Section: Gap Visual Cards -->
+    <section class="py-10 px-6 md:px-20 bg-sky-50">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded shadow p-6 text-center">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="Communication"
+            class="mb-4 w-full rounded"
+          />
+          <h3 class="text-lg font-semibold text-blue-900">
+            Communication Challenges
+          </h3>
+          <ul class="list-disc list-inside text-sm mt-2">
+            <li>Limited Communication Infrastructure</li>
+            <li>Isolation at Sea</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded shadow p-6 text-center">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="Safety"
+            class="mb-4 w-full rounded"
+          />
+          <h3 class="text-lg font-semibold text-blue-900">Safety Concerns</h3>
+          <ul class="list-disc list-inside text-sm mt-2">
+            <li>Adverse Weather Conditions</li>
+            <li>Navigational Hazards</li>
+            <li>Emergency Response</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded shadow p-6 text-center">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="Economics"
+            class="mb-4 w-full rounded"
+          />
+          <h3 class="text-lg font-semibold text-blue-900">
+            Economic And Operational Efficiencies
+          </h3>
+          <ul class="list-disc list-inside text-sm mt-2">
+            <li>Lack of Shared Knowledge</li>
+            <li>Inefficiencies of Fishing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Research Objective -->
+    <section
+      class="py-20 bg-cover bg-center text-white text-center"
+      style="background-image: url('https://via.placeholder.com/1920x600')"
+    >
+      <h2 class="text-4xl font-bold mb-4">Research Objective</h2>
+      <p class="max-w-4xl mx-auto px-4">
+        To enhance the safety, operational efficiency, and economic
+        sustainability of small-scale fishermen by developing and implementing
+        effective communication and navigation technologies, addressing the
+        technological divide between small and large fishing vessels, and
+        improving emergency response capabilities in isolated maritime areas.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-blue-900 text-white">
+      <p class="text-sm">
+        &copy; 2025 AquaSafe Research Team. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
