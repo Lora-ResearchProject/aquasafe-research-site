@@ -10,73 +10,68 @@
       rel="stylesheet"
       href="https://cdn.lineawesome.com/1.3.0/line-awesome/css/line-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="bg-sky-50 text-gray-800 font-sans">
     <!-- Navbar -->
     <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 text-white flex items-center justify-between px-8 py-4 backdrop-blur-md shadow-md"
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 text-white flex items-center justify-between px-6 py-4 backdrop-blur-md shadow-md"
     >
       <!-- Logo -->
       <div class="flex items-center space-x-2">
         <img
           src="./assets/logos/logo_white.png"
           alt="AquaSafe Logo"
-          class="h-10"
+          class="h-8 md:h-10"
         />
       </div>
 
-      <!-- Navigation Links -->
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="md:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Nav Links -->
       <ul
-        class="flex space-x-5 md:space-x-8 text-sm md:text-base font-medium"
-        id="navbar"
+        id="mobile-menu"
+        class="hidden md:flex flex-col md:flex-row absolute md:static top-full left-0 right-0 bg-gray-900 md:bg-transparent space-y-4 md:space-y-0 md:space-x-8 px-6 md:px-0 py-4 md:py-0 text-sm md:text-base font-medium"
       >
         <li>
-          <a
-            href="#home"
-            class="nav-link relative px-2 py-1 hover:text-teal-500 transition"
-            >Home</a
-          >
+          <a href="#home" class="nav-link block hover:text-teal-500">Home</a>
         </li>
         <li>
-          <a
-            href="#project-overview"
-            class="nav-link relative px-2 py-1 hover:text-teal-500 transition"
+          <a href="#project-overview" class="nav-link block hover:text-teal-500"
             >Project Overview</a
           >
         </li>
         <li>
-          <a
-            href="#milestones"
-            class="nav-link relative px-2 py-1 hover:text-teal-500 transition"
+          <a href="#milestones" class="nav-link block hover:text-teal-500"
             >Milestones</a
           >
         </li>
         <li>
           <a
             href="#project-documents"
-            class="nav-link relative px-2 py-1 hover:text-teal-500 transition"
+            class="nav-link block hover:text-teal-500"
             >Documents</a
           >
         </li>
         <li>
-          <a
-            href="#about"
-            class="nav-link relative px-2 py-1 hover:text-teal-500 transition"
-            >About</a
-          >
+          <a href="#about" class="nav-link block hover:text-teal-500">About</a>
         </li>
         <li>
-          <a
-            href="#contact"
-            class="nav-link relative px-2 py-1 hover:text-teal-500 transition"
+          <a href="#contact" class="nav-link block hover:text-teal-500"
             >Contact</a
           >
         </li>
       </ul>
     </nav>
 
-    <!-- -------------- hero section -------------- -->
+    <!-- Hero Section -->
     <div class="relative h-screen overflow-hidden pt-20" id="home">
       <!-- Slide 1 -->
       <div
@@ -87,17 +82,18 @@
           style="background-image: url('./assets/images/slider-01.jpg')"
         >
           <div
-            class="flex flex-col justify-center items-start h-full px-20 text-white bg-black bg-opacity-40"
+            class="flex flex-col justify-center items-start h-full px-6 md:px-20 text-white bg-black bg-opacity-40"
           >
-            <p class="text-xl mb-2">Let’s Go Fishing</p>
-            <h1 class="text-5xl font-bold leading-tight mb-6">
+            <p class="text-lg md:text-xl mb-2">Let’s Go Fishing</p>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
               Life's Journey<br />Enjoy Every Cast
             </h1>
-            <a
+            <!-- <a
               href="#join"
-              class="bg-blue-900 px-6 py-3 text-white text-lg font-semibold rounded"
-              >JOIN NOW</a
+              class="bg-blue-900 px-6 py-3 text-white text-base md:text-lg font-semibold rounded"
             >
+              JOIN NOW
+            </a> -->
           </div>
         </div>
       </div>
@@ -111,17 +107,18 @@
           style="background-image: url('./assets/images/slider-02.jpg')"
         >
           <div
-            class="flex flex-col justify-center items-start h-full px-20 text-white bg-black bg-opacity-40"
+            class="flex flex-col justify-center items-start h-full px-6 md:px-20 text-white bg-black bg-opacity-40"
           >
-            <p class="text-xl mb-2">Let’s Go Fishing</p>
-            <h1 class="text-5xl font-bold leading-tight mb-6">
+            <p class="text-lg md:text-xl mb-2">Let’s Go Fishing</p>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
               Making Waves<br />And Catching Fish
             </h1>
-            <a
+            <!-- <a
               href="#join"
-              class="bg-blue-900 px-6 py-3 text-white text-lg font-semibold rounded"
-              >JOIN NOW</a
+              class="bg-blue-900 px-6 py-3 text-white text-base md:text-lg font-semibold rounded"
             >
+              JOIN NOW
+            </a> -->
           </div>
         </div>
       </div>

@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 6000);
 });
 
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
 // Active nav link based on scroll
 const sections = document.querySelectorAll("section, header");
 const navLinks = document.querySelectorAll(".nav-link");
